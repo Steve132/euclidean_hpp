@@ -125,28 +125,28 @@ public:
 
 	template<class OT>
 	euclidean<decltype(T{}+OT{}),D>
-	operator+(const euclidean<OT,D>& o){
+	operator+(const euclidean<OT,D>& o) const{
 		return transform([o](size_t i,T v){
 			return v+o[i];
 		});
 	}
 	template<class OT>
 	euclidean<decltype(T{}-OT{}),D>
-	operator-(const euclidean<OT,D>& o){
+	operator-(const euclidean<OT,D>& o) const{
 		return transform([o](size_t i,T v){
 			return v-o[i];
 		});
 	}
 	template<class OT>
 	euclidean<decltype(T{}*OT{}),D>
-	operator*(OT o){
+	operator*(OT o) const{
 		return transform([o](size_t i,T v){
 			return v*o;
 		});
 	}
 	template<class OT>
 	euclidean<decltype(T{}/OT{}),D>
-	operator/(OT o){
+	operator/(OT o) const{
 		return transform([o](size_t i,T v){
 			return v/o;
 		});

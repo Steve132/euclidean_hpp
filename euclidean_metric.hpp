@@ -5,7 +5,7 @@
 #include<cmath>
 
 class euclidean_metric{
-
+public:
 	template<class T,unsigned D>
 	static inline T norm2(const euclidean<T,D>& v){
 		return v.reduce([](unsigned i,const T& f,const T& t){
@@ -26,6 +26,6 @@ class euclidean_metric{
 	static inline T distance(const euclidean<T,D>& a,const euclidean<T,D>& b){
 		return std::sqrt(distance2(a,b));
 	}
-}
+};
 
 #endif // POINT_HPP
