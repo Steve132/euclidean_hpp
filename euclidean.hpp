@@ -6,6 +6,7 @@
 #include<cstdlib>
 #include<iostream>
 
+
 namespace
 {
 	template<typename TupleOut,typename Func, std::size_t... I>
